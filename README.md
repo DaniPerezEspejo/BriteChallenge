@@ -1,4 +1,4 @@
-# BriteChallenge
+# Brite Challenge
 Brite Payments - QA Engineer- Challenge
 
 ## How to launch
