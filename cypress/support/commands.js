@@ -19,3 +19,8 @@ Cypress.Commands.add('assertElementContainsText', (selector, text) => {
 Cypress.Commands.add('assertPath', (path) => {
     cy.location('pathname').should('contain', path);
 })
+
+// Clciks outside in order to refresh elements after an input
+Cypress.Commands.add('clickOutside', () => {
+    cy.get('body').click(0,0);
+})

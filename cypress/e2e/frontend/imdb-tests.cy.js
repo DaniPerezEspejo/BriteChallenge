@@ -6,6 +6,7 @@ import { onProfilePage } from "../../pages/profilePage";
 import { onTopBoxOfficePage } from "../../pages/topBoxOfficePage";
 import { onTopTVShowsPage } from "../../pages/topTVShowsPage";
 import { onTitlePage } from "../../pages/titlePage";
+import { onBornTodayPage } from "../../pages/bornTodayPage";
 
 describe('Brite Challenge - Imdb testing', () => {
 
@@ -29,7 +30,7 @@ describe('Brite Challenge - Imdb testing', () => {
         cy.assertPath('registration/signin');
     })
 
-    it.only('Imdb - Top 250 TV Shows section - Photo filtering', () => {
+    it('Imdb - Top 250 TV Shows section - Photo filtering', () => {
         onHeader.clickOnMenu();
         onHeader.clickOnMenuSectionOption('Top 250 TV Shows');
         onTopTVShowsPage.clickOnTvShow('Breaking Bad');
@@ -39,5 +40,27 @@ describe('Brite Challenge - Imdb testing', () => {
         onTitlePage.filterPhotosByCustomPerson('Danny Trejo');
         onTitlePage.closeGalleryFilterPrompt();
         onTitlePage.openPhoto(1);
+    })
+
+    it('Imdb - Born Today - Yesterday celebrities', () => {
+        onHeader.clickOnMenu();
+        onHeader.clickOnMenuSectionOption('Born Today');
+        onBornTodayPage.removeDefaultFilter();
+        onBornTodayPage.clickBirthdayFilter();
+        onBornTodayPage.inputYesterdayBirthdayDateFilter();
+        onBornTodayPage.clickOnSeeResults();
+        onBornTodayPage.clickOnSearchResultName(2);
+        cy.screenshot();
+    })
+
+    it('Imdb - Born Today - 40 years ago celebrities', () => {
+        onHeader.clickOnMenu();
+        onHeader.clickOnMenuSectionOption('Born Today');
+        onBornTodayPage.removeDefaultFilter();
+        onBornTodayPage.clickBirthdateFilter();
+        onBornTodayPage.inputFourtyYearsAgoBirthDateFilter();
+        onBornTodayPage.clickOnSeeResults();
+        onBornTodayPage.clickOnFirstDescriptionLink(0);
+        cy.screenshot();
     })
 })

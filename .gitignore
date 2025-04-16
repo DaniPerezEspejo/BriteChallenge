@@ -12,3 +12,6 @@
 !.vscode/tasks.json
 !.vscode/launch.json
 !.vscode/extensions.json
+
+# Cypress - Screenshots
+/cypress/Screenshots
