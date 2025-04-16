@@ -1,6 +1,31 @@
 # Brite Challenge
 Brite Payments - QA Engineer- Challenge
+- [@daniperezespejo](https://www.github.com/DaniPerezEspejo)
 
-## How to launch
-npx cypress open
-npx cypress open --env environmentName=prod
+## Challenge sections
+
+### Frontend test cases
+#### General notes
+Spec files can be found in cypress/e2e/frontend folder.\
+Additional code is located following page structure in cypress/support/pages folder, along with the usual commands.js and e2e.js cypress files. It has been documented, although depending on usage / company good practices, extra comments and documentation in code could be removed.
+
+#### Launching tests
+Launch using default configuration:
+```javascript
+  npx cypress open
+```
+Launch selecting environment (in order to illustrate how this project would work with several environments):
+```javascript
+  npx cypress open --env environmentName=prod
+```
+
+### Backend test cases
+#### General notes
+Spec files can be found in cypress/e2e/backend folder.\
+Additional code is located in cypress/support/endpoints folder, along with the usual commands.js and e2e.js cypress files. It has been documented, although depending on usage / company good practices, extra comments and documentation in code could be removed.
+#### Request vs Intercept
+For these tests, cy.request() has been used as we are directly invoking the endpoint. It's worth to notice that, in more frontend e2e scenarios in which additional api calls checks needs to be performed, cy.intercept() would have been my preferred option.
+### Fixture notes
+Endpoints path are retrieved from a fixture json file, located in cypress/fixtures folder. This has been done to showcase scenarios in which the endpoint path might change. Using a fixture file will make a single source of truth, avoiding several changes on specs and/or code.
+#### Launching tests
+Same instructions as in frontend tests, including the environment optional parameter.

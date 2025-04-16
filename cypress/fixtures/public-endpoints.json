@@ -1,8 +1,8 @@
 [
     {
-    "verb": "GET",
-    "endpoint": "api/v2/berry/",
-    "alias": "getBerry"
+        "verb": "GET",
+        "endpoint": "api/v2/berry/",
+        "alias": "getBerry"
     },
     {
         "verb": "GET",
