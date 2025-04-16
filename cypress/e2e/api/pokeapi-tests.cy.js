@@ -1,6 +1,6 @@
 /// <reference types="cypress" />
 
-import { onPokeApi } from "../../endpoints/pokeapi";
+import { onPokeApi } from "../../support/endpoints/pokeapi";
 
 describe('Brite Challenge - Pokeapi testing', () => {
 

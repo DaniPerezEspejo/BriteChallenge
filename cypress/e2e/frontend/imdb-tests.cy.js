@@ -1,12 +1,12 @@
 /// <reference types="cypress" />
 
-import { onHomePage } from "../../pages/homePage";
-import { onHeader } from "../../pages/header";
-import { onProfilePage } from "../../pages/profilePage";
-import { onTopBoxOfficePage } from "../../pages/topBoxOfficePage";
-import { onTopTVShowsPage } from "../../pages/topTVShowsPage";
-import { onTitlePage } from "../../pages/titlePage";
-import { onBornTodayPage } from "../../pages/bornTodayPage";
+import { onHomePage } from "../../support/pages/homePage";
+import { onHeader } from "../../support/pages/header";
+import { onProfilePage } from "../../support/pages/profilePage";
+import { onTopBoxOfficePage } from "../../support/pages/topBoxOfficePage";
+import { onTopTVShowsPage } from "../../support/pages/topTVShowsPage";
+import { onTitlePage } from "../../support/pages/titlePage";
+import { onBornTodayPage } from "../../support/pages/bornTodayPage";
 
 describe('Brite Challenge - Imdb testing', () => {
 
