@@ -8,10 +8,22 @@ export class Header {
     }
 
     /** Searchs on header input
-     * @param {number} searchResult Result to be clicked on search result array.
+     * @param {number} searchResult Result to be clicked on search result array, being 0 the first element
      */
     clickOnSearchResult(searchResult) {
         cy.get('[data-testid="search-result--const"]').eq(searchResult).click();
+    }
+
+    // Clicks on header menu burger button
+    clickOnMenu() {
+        cy.get('#imdbHeader-navDrawerOpen').click();
+    }
+
+    /** Clicks on any option inside menu burger button - movies section, searching by text
+     * @param {string} option Clickable option inside any of the burger menu sections (movies, Celebs...)
+     */
+    clickOnMenuSectionOption(option) {
+        cy.get('[data-testid="panel-content"] [data-testid="list-container"]').contains(option).click();
     }
 }
 
