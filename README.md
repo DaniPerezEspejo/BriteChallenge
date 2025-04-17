@@ -12,11 +12,11 @@ Additional code is located following page structure in cypress/support/pages fol
 #### Launching tests
 Launch using default configuration:
 ```javascript
-  npx cypress open
+  npm run cy:open
 ```
 Launch selecting environment (in order to illustrate how this project would work with several environments):
 ```javascript
-  npx cypress open --env environmentName=prod
+  npm run cy:open:prod
 ```
 
 ---
@@ -46,3 +46,7 @@ Please notice we have an unnecesary non used column (notes) that I added just to
 MD file can be found in bug folder.\
 A fake screenshot was attached just to illustrate some attachments on the ticket bug report.\
 Depending on the company templates or ticketing system used (JIRA, etc...) additional fields could be added.
+
+---
+### Final notes
+In addition, ESLint and Prettier have been added to the project. Scripts can be found in package.json file.

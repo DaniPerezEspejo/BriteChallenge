@@ -1,11 +1,13 @@
 # Manual Test
- Given the following form:
- ```html
-    <label for="tentacles">Number of tentacles (10-100):</label>
-    <input type="number" id="tentacles" name="tentacles"
-       min="10" max="100">
-    <button>Send</button>
-  ```
+
+Given the following form:
+
+```html
+<label for="tentacles">Number of tentacles (10-100):</label>
+<input type="number" id="tentacles" name="tentacles" min="10" max="100" />
+<button>Send</button>
+```
+
 Write all necessary test cases using Gherkin language to make sure the input field is working as expected; valid values will lead to a "Success" message, and invalid to an "Error" message
 
 ## Tests cases proposal
@@ -20,7 +22,7 @@ So that only an acceptable amount of tentacles can be sent
 
     Given tentacles input is filled with "<value>" value
     When "Send" button is pressed
-    Then the response "<response>" is displayed 
+    Then the response "<response>" is displayed
 
     Examples:
       | value             | response  | notes              |

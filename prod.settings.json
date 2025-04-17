@@ -1,6 +1,6 @@
 {
-    "baseClientUrl": "https://www.imdb.com/",
-    "env": {
-        "baseServerUrl": "https://pokeapi.co/"
-    }
+  "baseClientUrl": "https://www.imdb.com/",
+  "env": {
+    "baseServerUrl": "https://pokeapi.co/"
+  }
 }
